@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Loader from 'react-ts-loaders'
 
 export default function Home() {
    return (
@@ -15,6 +16,7 @@ export default function Home() {
 
          <main className="main">
             <h1>Welcome - React Typescript Loaders</h1>
+            <Loader />
          </main>
 
          <footer>

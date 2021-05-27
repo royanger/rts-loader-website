@@ -1,8 +1,17 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Loader from 'react-ts-loaders'
+import LoaderSample from '../components/LoaderSample'
 
 export default function Home() {
+   const loaders = [
+      { title: 'Spinner', type: 'spinner' },
+      { title: 'Pulse', type: 'pulse' },
+      { title: 'Dual Rings', type: 'dualring' },
+      { title: 'Hourglass', type: 'hourglass' },
+      { title: 'Dot Spinner', type: 'dotspinner' },
+      { title: 'Ellipsis', type: 'ellipsis' },
+   ]
+
    return (
       <div>
          <Head>
@@ -15,13 +24,18 @@ export default function Home() {
          </Head>
 
          <main className="main">
-            <h1>Welcome - React Typescript Loaders</h1>
-            <Loader />
+            <div className="loader-samples">
+               {loaders.map(loader => {
+                  return (
+                     <LoaderSample
+                        key={loader.type}
+                        title={loader.title}
+                        type={loader.type}
+                     />
+                  )
+               })}
+            </div>
          </main>
-
-         <footer>
-            <p>by Roy Anger Welcome</p>
-         </footer>
       </div>
    )
 }

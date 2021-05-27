@@ -1,0 +1,35 @@
+.loader-samples {
+   display: grid;
+   grid-gap: 30px;
+   grid-template-columns: 1fr 1fr 1fr;
+   margin: 50px 15px;
+
+   > div {
+      border: 3px solid var(--brand-primary);
+   }
+
+   h2 {
+      margin-top: 0;
+      padding: 10px 5px;
+      background-color: var(--brand-primary);
+      color: var(--light-text);
+      text-align: center;
+   }
+
+   .pickerButton {
+      padding: 5px;
+      background: #fff;
+      border-radius: 1px;
+      border: 3px solid #fff;
+      // border: none;
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+      display: inline-block;
+      cursor: pointer;
+      margin: 5px;
+      width: 42px;
+      height: 20px;
+   }
+   .pickerButtonSwatch {
+      border-radius: 2px;
+   }
+}

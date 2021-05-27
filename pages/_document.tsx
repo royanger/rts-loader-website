@@ -26,26 +26,23 @@ class MyDocument extends Document {
                   property="og:description"
                   content="Simple, easy to use loader components for your React App"
                />
-               <link rel="icon" href="/images/favicons/favicon.ico" />
-               <link
-                  rel="apple-touch-icon"
-                  href="/images/favicons/apple-touch-icon.png"
-               />
+               <link rel="icon" href="/favicon.ico" />
+               <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
                <link
                   rel="icon"
                   type="image/png"
                   sizes="32x32"
-                  href="/images/favicons/favicon-32x32.png"
+                  href="/favicon-32x32.png"
                />
                <link
                   rel="icon"
                   type="image/png"
                   sizes="16x16"
-                  href="/images/favicons/favicon-16x16.png"
+                  href="/favicon-16x16.png"
                />
                <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-               <link rel="preconnect" href="https://fonts.gstatic.com" />
 
+               <link rel="preconnect" href="https://fonts.gstatic.com" />
                <link
                   href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;800&family=Merriweather&display=swap"
                   rel="stylesheet"

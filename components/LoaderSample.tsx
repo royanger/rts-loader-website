@@ -1,6 +1,6 @@
 import * as React from 'react'
 import Loader from 'react-ts-loaders'
-import { BlockPicker, SketchPicker, ChromePicker } from 'react-color'
+import { ChromePicker } from 'react-color'
 
 interface LoaderSampleProps {
    title: string
@@ -9,6 +9,7 @@ interface LoaderSampleProps {
 
 const LoaderSample = ({ title, type }: LoaderSampleProps) => {
    const [showAltColor, setShowAltColor] = React.useState(false)
+   const [size, setSize] = React.useState(100)
    const [colorOne, setColorOne] = React.useState({
       color: '#4682b4',
       displayPicker: false,
@@ -46,7 +47,12 @@ const LoaderSample = ({ title, type }: LoaderSampleProps) => {
    return (
       <div>
          <h2>{title}</h2>
-         <Loader type={type} color={colorOne.color} altColor={colorTwo.color} />
+         <Loader
+            type={type}
+            color={colorOne.color}
+            altColor={colorTwo.color}
+            size={size}
+         />
 
          <button
             id="colorOneButton"
@@ -58,7 +64,7 @@ const LoaderSample = ({ title, type }: LoaderSampleProps) => {
          </button>
          {colorOne.displayPicker ? (
             <div className="popover">
-               <div className="cover" onClick={handleClose} />
+               <div className="cover" onClick={() => handleClose} />
 
                <ChromePicker
                   color={colorOne.color}
@@ -77,7 +83,7 @@ const LoaderSample = ({ title, type }: LoaderSampleProps) => {
          </button>
          {colorTwo.displayPicker ? (
             <div className="popover">
-               <div className="cover" onClick={handleClose} />
+               <div className="cover" onClick={() => handleClose} />
 
                <ChromePicker
                   color={colorTwo.color}

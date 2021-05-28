@@ -1,5 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
+
+import Intro from '../components/Intro'
+import Installation from '../components/Installation'
 import LoaderSample from '../components/LoaderSample'
 
 export default function Home() {
@@ -13,7 +16,7 @@ export default function Home() {
    ]
 
    return (
-      <div>
+      <div className="contents">
          <Head>
             <title>React Typescript Loaders</title>
             <meta
@@ -24,6 +27,8 @@ export default function Home() {
          </Head>
 
          <main className="main">
+            <Intro />
+            <Installation />
             <div className="loader-samples">
                {loaders.map(loader => {
                   return (
@@ -38,4 +43,10 @@ export default function Home() {
          </main>
       </div>
    )
+}
+
+export async function getStaticProps() {
+   return {
+      props: {}, // will be passed to the page component as props
+   }
 }

@@ -1,0 +1,12 @@
+.contents {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.main {
+   max-width: 1080px;
+   width: 100%;
+   border: 2px solid red;
+   padding: 0 30px;
+}

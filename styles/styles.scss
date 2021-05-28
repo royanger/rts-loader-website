@@ -1,6 +1,8 @@
 @import 'normalize.css';
-@import './lib/Header.scss';
-@import './lib/LoaderSamples.scss';
+@import './lib/formatting';
+@import './lib/_header';
+@import './lib/_infosections';
+@import './lib/_loadersamples';
 
 :root {
    --brand-primary: #4682b4;

@@ -1,12 +1,7 @@
 import * as React from 'react'
 import Loader from 'react-ts-loaders'
-import Modal from '../components/Modal'
+import Modal from './Modal'
 import { ChromePicker } from 'react-color'
-import { Light as SyntaxHighlighter } from 'react-syntax-highlighter'
-import js from 'react-syntax-highlighter/dist/cjs/languages/hljs/javascript'
-import { a11yDark } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
-
-SyntaxHighlighter.registerLanguage('javascript', js)
 
 // TODO figure out what to use instead of any
 interface LoaderSampleProps {
@@ -72,7 +67,20 @@ const LoaderSample = ({
       setSize(parseFloat(e.target.value))
    }
 
-   const handleClose = (target: string) => {}
+   const handleClose = (target: string) => {
+      console.log('try to close Modal')
+
+      // TODO: refactor now that I am getting event from click??
+      switch (target) {
+         case 'colorOne':
+            setColorOne({ ...colorOne, displayPicker: false })
+            break
+         case 'colorTwo':
+            setColorTwo({ ...colorTwo, displayPicker: false })
+         default:
+            break
+      }
+   }
 
    return (
       <div>
@@ -100,18 +108,16 @@ const LoaderSample = ({
                   </button>
                   {colorOne.displayPicker ? (
                      <Modal>
-                        <div className="modal">
-                           <div className="popover">
-                              <div
-                                 className="cover"
-                                 onClick={() => handleClose}
-                              />
+                        <div className="popover">
+                           <div
+                              className="cover"
+                              onClick={() => handleClose('colorOne')}
+                           />
 
-                              <ChromePicker
-                                 color={colorOne.color}
-                                 onChange={handleColorOneChange}
-                              />
-                           </div>
+                           <ChromePicker
+                              color={colorOne.color}
+                              onChange={handleColorOneChange}
+                           />
                         </div>
                      </Modal>
                   ) : null}
@@ -139,14 +145,19 @@ const LoaderSample = ({
                      <div className="pickerButtonSwatch"></div>
                   </button>
                   {colorTwo.displayPicker ? (
-                     <div className="popover">
-                        <div className="cover" onClick={() => handleClose} />
+                     <Modal>
+                        <div className="popover">
+                           <div
+                              className="cover"
+                              onClick={() => handleClose('colorTwo')}
+                           />
 
-                        <ChromePicker
-                           color={colorTwo.color}
-                           onChange={handleColorTwoChange}
-                        />
-                     </div>
+                           <ChromePicker
+                              color={colorTwo.color}
+                              onChange={handleColorTwoChange}
+                           />
+                        </div>
+                     </Modal>
                   ) : null}
                </div>
                <div className={`label ${showAltColor ? '' : 'hidden'}`}>

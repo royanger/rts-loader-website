@@ -1,12 +1,20 @@
 #modal {
-   top: var(--modal-top);
-   left: var(--modal-left);
-   position: absolute;
-   height: 300px;
-   width: 300px;
-   border: 3px solid var(--brand-primary);
-   z-index: 100;
-}
+   .chrome-picker {
+      top: var(--modal-top);
+      left: var(--modal-left);
+      position: absolute;
+      // height: 300px;
+      // width: 300px;
+      border: 3px solid var(--brand-primary);
+      z-index: 100;
+   }
 
-.modal {
+   .cover {
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      background-color: rgba(104, 101, 101, 0.4);
+   }
 }

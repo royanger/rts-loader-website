@@ -13,6 +13,8 @@ function MyApp({ Component, pageProps }: AppProps) {
    })
 
    const handleUpdateModalPosition: modalPositionProps = (x, y) => {
+      console.log(`${Math.round(x)}px`)
+
       setModalPosition({
          left: `${Math.round(x)}px`,
          top: `${Math.round(y)}px`,
@@ -36,8 +38,12 @@ function MyApp({ Component, pageProps }: AppProps) {
          <footer>
             <p>by Roy Anger Welcome</p>
          </footer>
-         <div id="modal" style={modalCSSPosition}>
-            This is the modal
+         <div id="modal">
+            <div
+               id="modal-contents"
+               className="modal-contents"
+               style={modalCSSPosition}
+            ></div>
          </div>
       </>
    )

@@ -1,7 +1,7 @@
 .loader-samples {
    display: grid;
-   grid-gap: 30px;
-   grid-template-columns: 1fr 1fr 1fr;
+   gap: 30px 30px;
+   grid-template-columns: 1fr 1fr;
    margin: 50px 15px;
 
    > div {
@@ -15,7 +15,16 @@
       color: var(--light-text);
       text-align: center;
    }
+   .container {
+      height: 245px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
 
+   .hidden {
+      display: none;
+   }
    .pickerButton {
       padding: 5px;
       background: #fff;
@@ -30,5 +39,34 @@
    }
    .pickerButtonSwatch {
       border-radius: 2px;
+   }
+
+   .customization {
+      padding: 0 20px;
+
+      > div {
+         display: grid;
+         grid-template-columns: auto 1fr;
+         column-gap: 20px;
+      }
+   }
+   .copyandpaste {
+      margin: 1rem 1.5rem;
+      border: 2px solid var(--brand-primary);
+      padding: 10px;
+      font-size: 0.75rem;
+      background: rgb(43, 43, 43);
+      color: rgb(248, 248, 242);
+
+      .sample.opening {
+         display: block;
+      }
+      .sample.prop {
+         display: block;
+         padding-left: 25px;
+      }
+      .sample.closing {
+         display: block;
+      }
    }
 }

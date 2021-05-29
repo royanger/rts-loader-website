@@ -1,11 +1,18 @@
+import * as React from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 
 import Intro from '../components/Intro'
 import Installation from '../components/Installation'
 import LoaderSample from '../components/LoaderSample'
+import loadConfig from 'next/dist/next-server/server/config'
 
-export default function Home() {
+// TODO figure out what to use instead of any.
+interface HomeProps {
+   handleUpdateModalPosition: any
+}
+
+export default function Home({ handleUpdateModalPosition }: HomeProps) {
    const loaders = [
       { title: 'Spinner', type: 'spinner' },
       { title: 'Pulse', type: 'pulse' },
@@ -30,12 +37,14 @@ export default function Home() {
             <Intro />
             <Installation />
             <div className="loader-samples">
-               {loaders.map(loader => {
+               {loaders.map((loader, index) => {
                   return (
                      <LoaderSample
                         key={loader.type}
                         title={loader.title}
                         type={loader.type}
+                        index={index}
+                        handleUpdateModalPosition={handleUpdateModalPosition}
                      />
                   )
                })}

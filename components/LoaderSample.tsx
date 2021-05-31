@@ -181,13 +181,12 @@ const LoaderSample = ({
                </div>
             </div>
          </div>
-
          <div className="copyandpaste code">
-            <span className="sample opening">{`<Loader`}</span>
-            <span className="sample prop">{`type={${type}}`}</span>
-            <span className="sample prop">{`color={${colorOne.color}} `}</span>
+            <span className="sample opening">{`<Loader `}</span>
+            <span className="sample prop">{`type="${type}" `}</span>
+            <span className="sample prop">{`color="${colorOne.color}" `}</span>
             <span className="sample prop">{`${
-               showAltColor ? `altColor={${colorTwo.color}}` : ``
+               showAltColor ? `altColor="${colorTwo.color}" ` : ``
             }`}</span>
             <span className="sample prop">{`size={${size}} `}</span>
             <span className="sample closing">{`/>`}</span>

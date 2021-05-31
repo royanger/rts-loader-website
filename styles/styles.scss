@@ -1,6 +1,7 @@
 @import 'normalize.css';
 @import './lib/formatting';
 @import './lib/_header';
+@import './lib/footer';
 @import './lib/_infosections';
 @import './lib/_loadersamples';
 @import './lib/modal';
@@ -26,6 +27,7 @@ h6 {
    font-family: 'Fira Sans', sans-serif;
    font-weight: 800;
    letter-spacing: 0px;
+   color: var(--brand-primary);
 }
 .code {
    font-family: 'Fira Mono', monospace;

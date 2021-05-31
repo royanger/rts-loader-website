@@ -1,0 +1,24 @@
+footer {
+   background-color: #000;
+   color: var(--light-text);
+   display: flex;
+   justify-content: center;
+
+   .container {
+      a {
+         color: rgb(132, 169, 238);
+      }
+      a:hover {
+         color: rgb(87, 142, 245);
+      }
+      padding: 2rem;
+
+      .socials {
+         padding-top: 1rem;
+         font-size: 0.9rem;
+         svg {
+            padding: 10px 10px;
+         }
+      }
+   }
+}

@@ -44,7 +44,7 @@ class MyDocument extends Document {
 
                <link rel="preconnect" href="https://fonts.gstatic.com" />
                <link
-                  href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;800&family=Merriweather&family=Fira+Mono&display=swap"
+                  href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;800&family=Source+Sans+Pro&family=Fira+Mono&display=swap"
                   rel="stylesheet"
                />
             </Head>

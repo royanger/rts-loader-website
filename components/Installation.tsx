@@ -21,6 +21,23 @@ const MyComponent = () => {
 
 export default MyComponent`
 
+   const fullCode = `import * as React from 'react'
+import Loader from 'react-ts-loaders'
+
+const MyComponent = () => {
+   return (
+      <Loader
+         type="ripple"
+         color="#ec18dd"
+         altColor="#7b1a83"
+         size={300}
+         className="alt-loader"
+      />
+   )
+}
+
+export default MyComponent`
+
    return (
       <div className="installation">
          <h2>Getting Started</h2>
@@ -49,8 +66,8 @@ export default MyComponent`
 
          <p>
             Drop the Loader component into your application whereever you need
-            it. This will use the default Loader, the Spinner, and the
-            foreground colour for the element where you placed it.
+            it. This will use the default Loader, a Spinner, and the foreground
+            colour for the element where you placed it.
          </p>
          <SyntaxHighlighter
             showLineNumbers={true}
@@ -69,6 +86,26 @@ export default MyComponent`
             style={a11yDark}
          >
             {code}
+         </SyntaxHighlighter>
+
+         <p>
+            You can configure every aspect of the Loader via the following
+            props. See the README or the{' '}
+            <a
+               target="_blank"
+               href="https://github.com/royanger/react-ts-loaders"
+            >
+               GitHub page
+            </a>{' '}
+            for more details.
+         </p>
+         <SyntaxHighlighter
+            showLineNumbers={true}
+            wrapLines={true}
+            language="javascript"
+            style={a11yDark}
+         >
+            {fullCode}
          </SyntaxHighlighter>
       </div>
    )

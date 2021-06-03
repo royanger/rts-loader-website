@@ -1,11 +1,9 @@
 import * as React from 'react'
 import Head from 'next/head'
-import Image from 'next/image'
 
 import Intro from '../components/Intro'
 import Installation from '../components/Installation'
 import LoaderSample from '../components/LoaderSample'
-import loadConfig from 'next/dist/next-server/server/config'
 
 // TODO figure out what to use instead of any.
 interface HomeProps {
@@ -20,6 +18,11 @@ export default function Home({ handleUpdateModalPosition }: HomeProps) {
       { title: 'Hourglass', type: 'hourglass' },
       { title: 'Dot Spinner', type: 'dotspinner' },
       { title: 'Ellipsis', type: 'ellipsis' },
+      { title: 'Ring', type: 'ring' },
+      { title: 'Roller', type: 'roller' },
+      { title: 'Grid', type: 'grid' },
+      { title: 'Circle', type: 'circle' },
+      { title: 'Ripple', type: 'ripple' },
    ]
 
    return (

@@ -2,6 +2,7 @@ import * as React from 'react'
 import Loader from 'react-ts-loaders'
 import Modal from './Modal'
 import { ChromePicker } from 'react-color'
+import { useLoaderContext } from 'react-ts-loaders'
 
 // TODO figure out what to use instead of any
 interface LoaderSampleProps {
@@ -96,7 +97,36 @@ const LoaderSample = ({
          <div className="customization">
             <h3>Customize</h3>
 
-            <div className="colors">
+            <div className="options">
+               <div className="size">
+                  <form>
+                     <input
+                        type="number"
+                        id={`size-${index}`}
+                        className="sizeDropdown"
+                        name="Size"
+                        min="1"
+                        max="300"
+                        value={size}
+                        onChange={e => handleSizeChange(e)}
+                     />
+                  </form>
+               </div>
+               <div>
+                  <label htmlFor={`size-0${index}`}>Loader Size</label>
+               </div>
+               <div className="duotoneSelection">
+                  <form>
+                     <input
+                        id={`altColorOption-${index}`}
+                        type="checkbox"
+                        onChange={handleOptionChange}
+                     ></input>
+                  </form>
+               </div>
+               <div>
+                  <label htmlFor="altColorOption">Make Duotone</label>
+               </div>
                <div className="swatch">
                   <button
                      id={`colorOneButton-${index}`}
@@ -123,18 +153,6 @@ const LoaderSample = ({
                   ) : null}
                </div>
                <div className="label">Primary Color</div>
-               <div>
-                  <form>
-                     <input
-                        id={`altColorOption-${index}`}
-                        type="checkbox"
-                        onChange={handleOptionChange}
-                     ></input>
-                  </form>
-               </div>
-               <div>
-                  <label htmlFor="altColorOption">Make Duotone</label>
-               </div>
                <div className={`swatch ${showAltColor ? '' : 'hidden'}`}>
                   <button
                      id={`colorTwoButton-${index}`}
@@ -161,23 +179,7 @@ const LoaderSample = ({
                   ) : null}
                </div>
                <div className={`label ${showAltColor ? '' : 'hidden'}`}>
-                  Primary Color
-               </div>
-               <div>
-                  <form>
-                     <input
-                        type="number"
-                        id={`size-${index}`}
-                        name="Size"
-                        min="1"
-                        max="300"
-                        value={size}
-                        onChange={e => handleSizeChange(e)}
-                     />
-                  </form>
-               </div>
-               <div>
-                  <label htmlFor={`size-0${index}`}>Loader Size</label>
+                  Secondary Color
                </div>
             </div>
          </div>

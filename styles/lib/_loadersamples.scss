@@ -1,8 +1,12 @@
 .loader-samples {
    display: grid;
    gap: 30px 30px;
-   grid-template-columns: 1fr 1fr;
+   grid-template-columns: 1fr;
    margin: 50px 15px;
+
+   @include screen-size('tablet') {
+      grid-template-columns: 1fr 1fr;
+   }
 
    > div {
       border: 3px solid var(--brand-primary);
@@ -22,9 +26,6 @@
       justify-content: center;
    }
 
-   .hidden {
-      display: none;
-   }
    .pickerButton {
       padding: 5px;
       background: #fff;
@@ -34,7 +35,7 @@
       display: inline-block;
       cursor: pointer;
       margin: 5px;
-      width: 42px;
+      width: 85px;
       height: 20px;
    }
    .pickerButtonSwatch {
@@ -43,15 +44,34 @@
 
    .customization {
       padding: 0 20px;
+      height: 175px;
 
-      > div {
+      > div.options {
          display: grid;
          grid-template-columns: auto 1fr;
          column-gap: 20px;
+         grid-template-rows: 32px 32px 32px 32px;
+         align-items: center;
+
+         .swatch,
+         .duotoneSelection,
+         .size {
+            display: flex;
+            justify-content: center;
+         }
+
+         .swatch.hidden,
+         .label.hidden {
+            display: none;
+         }
+      }
+      .sizeDropdown {
+         max-width: 85px;
       }
    }
    .copyandpaste {
       margin: 1rem 1.5rem;
+      height: 100px;
       border: 2px solid var(--brand-primary);
       padding: 10px;
       font-size: 0.75rem;

@@ -1,10 +1,11 @@
 @import 'normalize.css';
-@import './lib/formatting';
+@import './lib/_mixins';
+@import './lib/_formatting';
 @import './lib/_header';
-@import './lib/footer';
+@import './lib/_footer';
 @import './lib/_infosections';
 @import './lib/_loadersamples';
-@import './lib/modal';
+@import './lib/_modal';
 
 :root {
    --brand-primary: #4682b4;

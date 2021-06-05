@@ -27,7 +27,7 @@ const LoaderSample = ({
    const [modalTop, setModalTop] = React.useState()
    const [modalLeft, setModalLeft] = React.useState()
    const [colorOne, setColorOne] = React.useState({
-      color: '#4682b4',
+      color: '#a00598',
       displayPicker: false,
    })
 
@@ -89,11 +89,10 @@ const LoaderSample = ({
          <Loader
             type={type}
             color={colorOne.color}
-            altColor={colorTwo.color}
+            altColor={showAltColor ? colorTwo.color : colorOne.color}
             size={size}
             className="container"
          />
-
          <div className="customization">
             <h3>Customize</h3>
 

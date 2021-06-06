@@ -65,7 +65,7 @@ export default MyComponent`
          </SyntaxHighlighter>
 
          <p>
-            Drop the Loader component into your application whereever you need
+            Drop the Loader component into your application wherever you need
             it. This will use the default Loader, a Spinner, and the foreground
             colour for the element where you placed it.
          </p>

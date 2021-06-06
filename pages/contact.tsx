@@ -98,7 +98,10 @@ const Contact = () => {
                </a>
             </p>
             <p>
-               <a href="https://github.com/royanger/react-ts-loaders">
+               <a
+                  target="_blank"
+                  href="https://github.com/royanger/react-ts-loaders"
+               >
                   <GitHub
                      width="40px"
                      height="40px"
@@ -114,14 +117,17 @@ const Contact = () => {
                </a>
             </p>
             <p>
-               <a href="https://www.npmjs.com/~royanger">
+               <a target="_blank" href="https://www.npmjs.com/~royanger">
                   <NPM
                      width="40px"
                      height="40px"
                      fill="var(--brand-secondary)"
                   />
                </a>
-               Visit the <a href="https://www.npmjs.com/~royanger">NPM page</a>
+               Visit the{' '}
+               <a target="_blank" href="https://www.npmjs.com/~royanger">
+                  NPM page
+               </a>
             </p>
 
             <h2>Shoot me an email!</h2>

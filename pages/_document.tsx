@@ -45,6 +45,21 @@ class MyDocument extends Document {
                   content="Preview of React TS Loader Demo Site"
                />
                <meta property="og:image:type" content="image/jpg" />
+
+               <meta name="twitter:card" content="summary" />
+               <meta name="twitter:site" content="React Typescript Loaders" />
+               <meta
+                  name="twitter:title"
+                  content="Simple, easy to use loader components for your React App"
+               />
+               <meta
+                  name="twitter:description"
+                  content="Simple, easy to use loader components for your React App"
+               />
+               <meta
+                  name="twitter:image"
+                  content="https://loaders.royanger.app/preview.jpg"
+               />
                <link rel="icon" href="/favicon.ico" />
                <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
                <link

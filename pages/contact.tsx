@@ -85,7 +85,7 @@ const Contact = () => {
             </p>
 
             <p>
-               <a href="https://twitter.com/royanger">
+               <a target="_blank" href="https://twitter.com/royanger">
                   <Twitter
                      width="40px"
                      height="40px"
@@ -93,7 +93,9 @@ const Contact = () => {
                   />
                </a>
                Reach out to me on{' '}
-               <a href="https://twitter.com/royanger">Twitter</a>
+               <a target="_blank" href="https://twitter.com/royanger">
+                  Twitter
+               </a>
             </p>
             <p>
                <a href="https://github.com/royanger/react-ts-loaders">
@@ -104,7 +106,10 @@ const Contact = () => {
                   />
                </a>
                File a an Issue on the{' '}
-               <a href="https://github.com/royanger/react-ts-loaders">
+               <a
+                  target="_blank"
+                  href="https://github.com/royanger/react-ts-loaders"
+               >
                   GitHub repo
                </a>
             </p>

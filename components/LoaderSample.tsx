@@ -37,9 +37,6 @@ const LoaderSample = ({
       displayPicker: false,
    })
 
-   const handleOptionChange = () => {
-      setShowAltColor(prevState => !prevState)
-   }
    const handleColorOneChange = (color: any) => {
       setColorOne(prevState => ({ ...prevState, color: color.hex }))
    }
@@ -69,18 +66,25 @@ const LoaderSample = ({
    }
 
    const handleClose = (target: string) => {
-      console.log('try to close Modal')
+      // don't worry about which is open -- close both since only one can be open
+      setColorOne({ ...colorOne, displayPicker: false })
+      setColorTwo({ ...colorTwo, displayPicker: false })
+   }
 
-      // TODO: refactor now that I am getting event from click??
-      switch (target) {
-         case 'colorOne':
-            setColorOne({ ...colorOne, displayPicker: false })
-            break
-         case 'colorTwo':
-            setColorTwo({ ...colorTwo, displayPicker: false })
-         default:
-            break
+   const handleESCKey = (e: KeyboardEvent) => {
+      if (e?.code === 'Escape') {
+         console.log('ESC press')
+         setColorOne({ ...colorOne, displayPicker: false })
+         setColorTwo({ ...colorTwo, displayPicker: false })
       }
+   }
+
+   React.useEffect(() => {
+      document.addEventListener('keydown', handleESCKey)
+   }, [])
+
+   const handleOptionChange = () => {
+      setShowAltColor(prevState => !prevState)
    }
 
    return (
@@ -112,7 +116,9 @@ const LoaderSample = ({
                   </form>
                </div>
                <div>
-                  <label htmlFor={`size-0${index}`}>Loader Size</label>
+                  <label htmlFor={`size-0${index}`}>
+                     Loader Size (1-300 in demo)
+                  </label>
                </div>
                <div className="duotoneSelection">
                   <form>

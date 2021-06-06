@@ -26,6 +26,19 @@ class MyDocument extends Document {
                   property="og:description"
                   content="Simple, easy to use loader components for your React App"
                />
+               <meta
+                  property="og:image"
+                  content="https://loaders.royanger.app/preview.jpg"
+               />
+               <meta
+                  property="og:image:secure_url"
+                  content="https://loaders.royanger.app/preview.jpg"
+               />
+               <meta
+                  property="og:image:alt"
+                  content="Preview of React TS Loader Demo Site"
+               />
+               <meta property="og:image:type" content="image/jpg" />
                <link rel="icon" href="/favicon.ico" />
                <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
                <link

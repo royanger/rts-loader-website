@@ -1,0 +1,73 @@
+.contactpage {
+   h2 {
+      margin: 4rem 0 2rem;
+   }
+   p {
+      a {
+         margin-right: 1.5rem;
+      }
+   }
+}
+.contactform {
+   display: grid;
+   grid-template-columns: 1fr;
+   gap: 20px;
+   align-items: center;
+
+   @include screen-size('tablet') {
+      grid-template-columns: auto 1fr;
+   }
+
+   label {
+      display: block;
+   }
+   input,
+   textarea {
+      border: 2px solid var(--brand-secondary);
+      border-radius: 3px;
+      padding: 5px;
+
+      @include screen-size('tablet') {
+         width: 50%;
+      }
+   }
+   textarea {
+      height: 5rem;
+   }
+   .submitcontainer {
+      margin: 1rem 0 1rem;
+
+      @include screen-size('tablet') {
+         grid-column: 1/3;
+      }
+   }
+
+   .submit {
+      background-color: var(--brand-secondary);
+      color: var(--light-text);
+      border: none;
+      padding: 0.45rem 1.5rem;
+      border-radius: 3px;
+   }
+   .submit:active {
+      background-color: var(--link-active);
+   }
+}
+.loader {
+   margin-bottom: 5rem;
+}
+.success,
+.error {
+   border: 2px solid var(--brand-secondary);
+   color: var(--brand-primary);
+   font-size: 1.25rem;
+   margin-bottom: 5rem;
+   padding: 0 2rem;
+}
+.validation.unsubmitted {
+   border: 2px solid red;
+   padding: 5px 10px;
+   @include screen-size('tablet') {
+      width: 49%;
+   }
+}

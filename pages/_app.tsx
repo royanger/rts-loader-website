@@ -1,5 +1,6 @@
 import * as React from 'react'
 import type { AppProps } from 'next/app'
+import Link from 'next/link'
 import '../styles/styles.scss'
 import Image from 'next/image'
 
@@ -33,7 +34,9 @@ function MyApp({ Component, pageProps }: AppProps) {
    return (
       <>
          <header>
-            <h1>React Typescript Loaders</h1>
+            <Link href="/">
+               <h1>React Typescript Loaders</h1>
+            </Link>
          </header>
          <Component
             handleUpdateModalPosition={handleUpdateModalPosition}

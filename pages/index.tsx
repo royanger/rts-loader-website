@@ -1,5 +1,6 @@
 import * as React from 'react'
 import Head from 'next/head'
+import Link from 'next/link'
 
 import Intro from '../components/Intro'
 import Installation from '../components/Installation'
@@ -51,6 +52,12 @@ export default function Home({ handleUpdateModalPosition }: HomeProps) {
                      />
                   )
                })}
+            </div>
+            <div>
+               <p>If you have any questions, please reach out to me!</p>
+               <Link href="/contact">
+                  <button className="button">Contact Me</button>
+               </Link>
             </div>
          </main>
       </div>

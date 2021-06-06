@@ -20,6 +20,12 @@ class MyDocument extends Document {
 
                <meta name="theme-color" content="#000000" />
                <meta property="og_type" content="website" />
+               <meta property="og:type" content="website" />
+               <meta
+                  property="og:url"
+                  content="
+               https://loaders.royanger.app"
+               />
                <meta property="og:name" content="React Typescript Loaders" />
                <meta property="og:title" content="React Typescript Loaders" />
                <meta

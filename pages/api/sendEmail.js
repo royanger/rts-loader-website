@@ -15,7 +15,7 @@ async function sendEmail({ name, email, phone, message }) {
    const emailOptions = {
       from: `${name} <${email}>`,
       to: 'roy@royanger.com',
-      subject: `Contact - ${name}`,
+      subject: `Contact Form - ${name}`,
       html: `
          <p>This message is from the contact form on roy@royanger.com</p>
 
@@ -26,14 +26,14 @@ async function sendEmail({ name, email, phone, message }) {
          <p>Message: ${message}</p>
       `,
    }
-   return transporter.sendMail(emailOptions)
+   // return transporter.sendMail(emailOptions)
 }
 
 export default async function handler(req, res) {
    if (req.method === 'POST') {
       const emailRes = await sendEmail(req.query)
       if (emailRes.messageId) {
-         return res.status(200).json({ message: `Email sent successfully` })
+         return res.status(200).json({ message: 'Email sent successfully' })
       }
 
       return res.status(400).json({ message: 'Error sending email' })

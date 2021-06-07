@@ -53,12 +53,12 @@ export default function Home({ handleUpdateModalPosition }: HomeProps) {
                   )
                })}
             </div>
-            <div>
+            {/* <div>
                <p>If you have any questions, please reach out to me!</p>
                <Link href="/contact">
                   <button className="button">Contact Me</button>
                </Link>
-            </div>
+            </div> */}
          </main>
       </div>
    )

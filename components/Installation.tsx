@@ -31,6 +31,7 @@ const MyComponent = () => {
          color="#ec18dd"
          altColor="#7b1a83"
          size={300}
+         message="Updated information is loading"
          className="alt-loader"
       />
    )
